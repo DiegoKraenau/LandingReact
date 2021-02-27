@@ -1,0 +1,208 @@
+.footer {
+  width: 100%;
+  height: auto;
+  background: $BrightRed;
+  margin: 0 auto;
+
+  &__text {
+    width: 100%;
+    height: 200px;
+    max-width: 1250px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1250px) {
+      max-width: 90%;
+    }
+
+    & h2 {
+      color: white;
+      font-size: 40px;
+
+      @media screen and (max-width: 1250px) {
+        font-size: 40px;
+      }
+
+      @include breakpoint-up(medium) {
+        font-size: 1.875rem;
+      }
+
+      @include breakpoint-up(small) {
+        br {
+        }
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__container {
+    width: 100%;
+    background: $VeryDarkBlue;
+  }
+
+  .btn-footer {
+    background: white;
+    color: $BrightRed;
+  }
+
+  &__information {
+    width: 100%;
+    height: 300px;
+    max-width: 1250px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1250px) {
+      max-width: 90%;
+    }
+
+    @include breakpoint-up(small) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      height: auto;
+      min-height: 400px;
+    }
+
+    &__social {
+      height: 50%;
+      display: flex;
+      flex-wrap: wrap;
+
+      @include breakpoint-up(small) {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .logo {
+        width: 100px;
+        height: 20px;
+      }
+
+      .social {
+        width: 100%;
+
+        @include breakpoint-up(small) {
+          display: flex;
+          justify-content: center;
+          margin-top: 15px;
+        }
+
+        & > img {
+          @include breakpoint-up(medium) {
+            width: 15px;
+            height: 15px;
+          }
+
+          &:not(:first-child) {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    &__links1,
+    &__links2 {
+      height: 50%;
+
+      @include breakpoint-up(small){
+        width: 40%;
+        height: 8.75rem;
+      }
+
+      & ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+
+        & li {
+          width: 100%;
+          &:not(:first-child) {
+            margin-top: 10px;
+          }
+
+          & a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            transition: 300ms all ease-in-out;
+
+            @include breakpoint-up(medium) {
+              font-size: 12px;
+            }
+
+            &:hover {
+              color: $BrightRed;
+            }
+          }
+        }
+      }
+    }
+
+    &__email {
+      height: 50%;
+      width: 18.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      
+
+      @media screen and (max-width: 931px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 40%;
+      }
+
+      @include breakpoint-up(small){
+        height: 100px;
+      }
+
+      & input {
+        height: 40px;
+        padding: 5px;
+        border-radius: 30px;
+        border: none;
+        font-family: "Be Vietnam", sans-serif;
+        font-size: 14px;
+        outline: none;
+        border: 1px solid $BrightRed;
+        color: $BrightRed;
+
+        @media screen and (max-width: 931px) {
+          width: 90%;
+          margin-bottom: 20px;
+        }
+      }
+
+      & button {
+        width: auto;
+        height: 40px;
+        background: $BrightRed;
+        font-size: 0.75rem;
+        text-decoration: none;
+        border-radius: 30px;
+        color: $VeryPaleRed;
+        font-weight: 500;
+        transition: 300ms all ease-in-out;
+        border: none;
+        padding-left: 15px;
+        padding-right: 15px;
+        cursor: pointer;
+        margin-left: 10px;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+      & p{
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
